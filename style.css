@@ -1,0 +1,308 @@
+/* intégrer ma police "Poppins" télechargé sur GoogleFonts dans mon body afin qu'elle soit ma police par défaut et l'arriere plan conçu sur Figma de A à Z
+ afin de garder le coté degradé doux de mon arriére plan ou fond de page.*/
+
+body {
+  background-image: url(images/arriereplan.png);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+
+}
+
+/* enlever toutes les decorations (soulignements) de "a:link " par défaut */
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: #EE4B00;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: solid #9F2042 6px;
+  border-radius: 30px;
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-shadow: #ffffff69 0.5px 1px 4px 4px;
+}
+
+/* Partie header et la barre de menu */
+
+header {
+  width: 100%;
+  aspect-ratio: 1150 / 519;
+  overflow: hidden;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.background_image img {
+  position: relative;
+  top: -10rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -12;
+  border-radius: 30px;
+  opacity: 50% black;
+  filter: brightness(40%);
+}
+
+.barre_menu {
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#logo img {
+  width: 9rem;
+  max-width: 130px;
+  margin-left: 2rem;
+  z-index: 5;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  font-weight: 500;
+  color: #ffff;
+  font-size: 1.25rem;
+}
+
+.button_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8E5EE;
+  color: #660F56;
+  font-weight: 500;
+  border-radius: 20px;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  width: 9rem;
+  max-width: 157px;
+  height: 1.5rem;
+  max-height: 40px;
+}
+
+/* text et button "voir plus"*/
+
+.text_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  color: #ffff;
+  font-weight: 300;
+  position: relative;
+  bottom: 13rem;
+  margin-left: 2rem;
+}
+
+#button_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 12rem;
+  max-width: 198px;
+  height: 2rem;
+  max-height: 52px;
+  border-radius: 20px;
+  background-color: #9F2042;
+}
+
+#button_text a {
+  color: #ffff;
+}
+
+.place {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 6rem;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #9F2042 solid 4px;
+  border-radius: 30px;
+  box-shadow: #ffffff69 0.5px 1px 4px 4px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.map img {
+  width: 33rem;
+  max-width: 524px;
+  height: 16rem;
+  max-height: 252px;
+}
+
+.map a {
+  color: #ffff;
+}
+
+.artists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  background-size: cover;
+}
+
+.box_artists {
+  position: absolute;
+  width: 12.5rem;
+  max-width: 200px;
+  height: 18.7rem;
+  max-height: 300px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+
+.box_artists img {
+  width: 8rem;
+  max-width: 154px;
+  height: 10rem;
+  max-height: 216px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+
+
+/* Mobile (petits écrans) */
+/* Mobile first */
+body {
+  font-size: 1rem;
+  /* 16px par défaut */
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Tablette */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+    padding: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.2rem;
+    padding: 3rem;
+  }
+}
+
+/* Grand desktop */
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.3rem;
+    padding: 4rem;
+  }
+}
+
+
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(poppins_family/Poppins-Medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(poppins_family/Poppins-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(poppins_family/Poppins-Black.ttf) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(poppins_family/Poppins-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(poppins_family/Poppins-ExtraBold.ttf) format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(poppins_family/Poppins-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(poppins_family/Poppins-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
